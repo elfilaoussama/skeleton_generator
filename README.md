@@ -47,8 +47,9 @@ The generator is highly parameterized, allowing you to tightly control the volum
 | `--max-coupling <int>` | The maximum allowed coupling (dependencies) between any two individual classes. Set to 0 to prevent cross-dependencies. | -1 (No limit) |
 | `--bitwidth <int>` | The integer bitwidth capacity used by the Alloy solver. | 5 |
 | `--instances <int>` | The total number of valid solutions (instances) to extract and save. | 3 |
-| `--threads <int>` | The number of concurrent background threads allocated to the SAT solver to mass-generate instances in parallel natively. | Core count |
+| `--threads <int>` | The number of concurrent background threads allocated to the SAT solver. | Core count |
 | `--format <xml|txt>` | The output format for the generated instances. | xml |
+| `--help, -h` | Displays the help menu with all available options and defaults. | N/A |
 
 ### High-Volume Diverse Datasets (Recommended)
 
