@@ -45,6 +45,22 @@ public class InstanceGenerator {
         int threads = Runtime.getRuntime().availableProcessors();
         
         for (int i = 0; i < args.length; i++) {
+            if (args[i].equals("--help") || args[i].equals("-h")) {
+                System.out.println("Usage: java -cp \"lib/alloy4.jar;src\" main.InstanceGenerator [options]");
+                System.out.println("Options:");
+                System.out.println("  --classes <int|min-max>   Number of classes (default: 5)");
+                System.out.println("  --methods <int|min-max>   Number of methods (default: 6)");
+                System.out.println("  --attributes <int|min-max> Number of attributes (default: 4)");
+                System.out.println("  --min-depth <int>         Minimum inheritance depth (default: 1)");
+                System.out.println("  --max-coupling <int>      Max classes a class can talk to (default: -1)");
+                System.out.println("  --bitwidth <int>          Alloy bitwidth (default: 5)");
+                System.out.println("  --instances <int>         Number of instances to generate (default: 3)");
+                System.out.println("  --format <xml|txt>        Output format (default: xml)");
+                System.out.println("  --threads <int>           Number of parallel threads (default: CPU cores)");
+                System.out.println("  --model <path>            Path to .als metamodel");
+                System.out.println("  --help, -h                Show this help message");
+                return;
+            }
             if (args[i].equals("--classes") && i + 1 < args.length) classesBound = parseBound(args[++i]);
             if (args[i].equals("--methods") && i + 1 < args.length) methodsBound = parseBound(args[++i]);
             if (args[i].equals("--attributes") && i + 1 < args.length) attributesBound = parseBound(args[++i]);
