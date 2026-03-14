@@ -40,15 +40,16 @@ The generator is highly parameterized, allowing you to tightly control the volum
 
 | Argument | Description | Default |
 |---|---|---|
-| `--classes <int|min-max>` | The number of Classes to generate (e.g. `5` or `5-15`). | 5 |
-| `--methods <int|min-max>` | The number of Methods globally distributed (e.g. `10` or `10-25`). | 6 |
-| `--attributes <int|min-max>` | The number of Attributes globally distributed (e.g. `0-10`). | 4 |
-| `--min-depth <int>` | The minimum required depth for at least one inheritance hierarchy tree. | 1 |
-| `--max-coupling <int>` | The maximum allowed coupling (dependencies) between any two individual classes. Set to 0 to prevent cross-dependencies. | -1 (No limit) |
-| `--bitwidth <int>` | The integer bitwidth capacity used by the Alloy solver. | 5 |
-| `--instances <int>` | The total number of valid solutions (instances) to extract and save. | 3 |
-| `--threads <int>` | The number of concurrent background threads allocated to the SAT solver. | Core count |
-| `--format <xml|txt>` | The output format for the generated instances. | xml |
+| `--classes <int\|min-max>` | The number of Classes to generate (e.g. `5` or `5-15`). | `5` |
+| `--methods <int\|min-max>` | The number of Methods globally distributed (e.g. `10` or `10-25`). | `6` |
+| `--attributes <int\|min-max>` | The number of Attributes globally distributed (e.g. `0-10`). | `4` |
+| `--min-depth <int>` | The minimum required depth for at least one inheritance hierarchy tree. | `1` |
+| `--max-coupling <int>` | The maximum allowed coupling (dependencies) between any two individual classes. Set to 0 to prevent cross-dependencies. | `-1` (Unlimited) |
+| `--bitwidth <int>` | The integer bitwidth capacity used by the Alloy solver. | `5` |
+| `--instances <int>` | The total number of valid solutions (instances) to extract and save. | `3` |
+| `--threads <int>` | The number of concurrent background threads allocated to the SAT solver. | System Cores |
+| `--format <xml\|txt>` | The output format for the generated instances. | `xml` |
+| `--model <path>` | Path to the custom Alloy `.als` formal metamodel file. | `models/final_class_hierarchies.als` |
 | `--help, -h` | Displays the help menu with all available options and defaults. | N/A |
 
 ### High-Volume Diverse Datasets (Recommended)
